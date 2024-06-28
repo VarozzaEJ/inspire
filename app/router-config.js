@@ -5,11 +5,12 @@ import { HomeController } from "./controllers/HomeController.js";
 import { AuthGuard } from "./services/AuthService.js";
 import { Router } from "./utils/Router.js";
 import { ToDosController } from "./controllers/ToDosController.js";
+import { WeatherController } from "./controllers/WeatherController.js";
 
 export const router = new Router([
   {
     path: "",
-    controllers: [ImagesController, ToDosController],
+    controllers: [ImagesController, ToDosController, WeatherController],
     view: "app/views/HomeView.html",
   },
   {

@@ -66,10 +66,25 @@
     </main>
 
     <!-- SECTION -->
-    <footer class="bg-dark text-light">
-      <div class="text-center no-select">
-        <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
-      </div>
+    <footer class="bg-smokey container-fluid text-light">
+      <div class="row sticky-bottom">
+        <div class="col-12 bg-smokey rounded">
+          <div class="row ">
+          
+            <div class="col-3">
+                <div  class=" d-flex  justify-content-center mt-2">
+                    <h3 onclick="app.WeatherController.celsiusTemperature()" class="bg-secondary rounded" id="weather"></h3><i class="mdi fs-3 mdi-temperature-fahrenheit"></i>
+                </div>
+            </div>
+          
+            <div class="col-6">
+                <div class="d-flex justify-content-center">
+                    <h1>Time Goes Here</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
