@@ -9,6 +9,8 @@ export class ToDosController {
     console.log("ToDosController loaded");
     AppState.on("account", this.getToDos)
     AppState.on("ToDos", this.drawToDos);
+    AppState.on("account", this.drawToDos)
+    AppState.on("ToDos", this.drawUncheckedNumberOfToDos)
   }
 
   async makeToDo() {
@@ -39,7 +41,12 @@ export class ToDosController {
     let innerHTML = "";
     toDo.forEach((task) => (innerHTML += task.ToDoTemplate));
     setHTML("toDoList", innerHTML);
-    setText("uncheckedCount", toDo.length)
+  }
+
+  drawUncheckedNumberOfToDos() {
+    const ToDos = AppState.ToDos
+    const uncheckedTodos = ToDos.filter((Todo) => Todo.completed == false)
+    setText("uncheckedCount", `${uncheckedTodos.length}`)
   }
 
   async toggleCompleted(taskId) {
