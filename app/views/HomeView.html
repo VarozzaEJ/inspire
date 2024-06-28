@@ -1,0 +1,35 @@
+<div class="container-fluid" id="bgImage">
+  <div class="row">
+    <div class="col-12">
+      <div class="row d-flex justify-content-end">
+        <div class="col-3 bg-smokey rounded d-flex justify-content-center">
+          <div class="text-center text-light d-flex justify-content-center flex-column">
+            <div class="d-flex flex-row justify-content-between">
+            <h1 class="my-2">ToDo's</h1>
+            <h1 class="d-flex flex-row my-2 g-1"><p class="me-2" id="uncheckedCount">0 </p> Left</h1>
+            </div>
+            <form onsubmit="app.ToDosController.makeToDo()">
+              <div class="mb-3 d-flex flex-row">
+                <label for="description" class="form-label mx-2 fs-4"
+                  >Name</label
+                >
+                <input
+                  type="description"
+                  class="form-control mx-2"
+                  id="description"
+                  name="description"
+                />
+                <button type="submit" class="btn btn-outline-light">
+                  <i class="mdi mdi-floppy"></i>
+                </button>
+              </div>
+            </form>
+            <div class="d-flex flex-row justify-content-center">
+              <div id="toDoList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
