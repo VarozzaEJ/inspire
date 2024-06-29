@@ -19,6 +19,14 @@ class WeatherService {
         AppState.temperature = superCelsiusMathdWeather
     }
 
+    async changeTemperature() {
+        const weather = await api.get("api/weather")
+        let drilledData = weather.data.main.temp
+        let celsiusMathdWeather = (drilledData - 273.15)
+        let fahrenheitMathdWeather = (drilledData - 273.15) * 1.8 + 32
+        let calculatedWeather = celsiusMathdWeather
+    }
+
 }
 
 export const weatherService = new WeatherService()

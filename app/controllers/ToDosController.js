@@ -6,7 +6,6 @@ import { setHTML, setText } from "../utils/Writer.js";
 
 export class ToDosController {
   constructor() {
-    console.log("ToDosController loaded");
     AppState.on("account", this.getToDos)
     AppState.on("ToDos", this.drawToDos);
     AppState.on("account", this.drawToDos)

@@ -28,4 +28,12 @@ export class WeatherController {
             Pop.toast(error)
         }
     }
+
+    async changeTemperature() {
+        try {
+            await weatherService.changeTemperature()
+        } catch (error) {
+            Pop.toast(error)
+        }
+    }
 }

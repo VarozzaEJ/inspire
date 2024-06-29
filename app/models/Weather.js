@@ -3,12 +3,13 @@ export class Weather {
         this.name = data.name
         this.weather = data.weather
         this.temp = data.temp
-        this.fahrenheit = ''
+        this.fahrenheit = 'mdi-temperature-fahrenheit'
+        this.celsius = 'mdi-temperature-celsius'
     }
 
     get weatherTemplate() {
         return `
-            <h3 class="bg-secondary rounded" "></h3><i class="mdi fs-3 mdi-temperature-fahrenheit"></i>
+            <h3 class="bg-secondary rounded" ">${this.weather}</h3><i class="mdi fs-3 mdi-temperature-fahrenheit"></i>
         `
     }
 }
