@@ -5,6 +5,7 @@ export class Weather {
         this.temp = data.temp
         this.fahrenheit = 'mdi-temperature-fahrenheit'
         this.celsius = 'mdi-temperature-celsius'
+        this.time = new Date()
     }
 
     get weatherTemplate() {
