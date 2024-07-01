@@ -3,16 +3,19 @@ import { setText } from "../utils/Writer.js"
 
 export class TimeController {
     constructor() {
+        AppState.time += 1
         this.displayTime()
-        AppState.on('time', this.displayTime)
+        this.refreshTime()
     }
     displayTime() {
         let time = new Date().toLocaleTimeString()
         setText('time', time)
-        setTimeout(this.displayTime, 1000)
-        AppState.time += 1
+        AppState.time += 2
     }
 
+    refreshTime() {
+        setInterval(this.displayTime, 1000)
+    }
 
 
 }
