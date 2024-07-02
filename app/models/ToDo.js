@@ -9,7 +9,7 @@ export class ToDo {
     return `
     <div class="d-flex flex-row justify-content-center">
     <input onchange="app.ToDosController.toggleCompleted('${this.id
-      }')" type="checkbox" class="checky" ${this.completed ? "checked" : ""}>
+      }')" type="checkbox" class="checky me-2 mt-1" ${this.completed ? "checked" : ""}>
                   <h3>${this.description}</h3>
                   <button onclick="app.ToDosController.deleteToDo('${this.id
       }')" class="btn btn-outline-light ms-2 mb-2">

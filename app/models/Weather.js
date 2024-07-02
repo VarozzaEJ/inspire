@@ -1,16 +1,22 @@
-export class Weather {
+export class Quote {
     constructor(data) {
-        this.name = data.name
-        this.weather = data.weather
-        this.temp = data.temp
-        this.fahrenheit = 'mdi-temperature-fahrenheit'
-        this.celsius = 'mdi-temperature-celsius'
-        this.time = new Date()
+        this.author = data.author
+        this.content = data.content
     }
 
-    get weatherTemplate() {
+    get quoteTemplate() {
         return `
-            <h3 class="bg-secondary rounded" ">${this.weather}</h3><i class="mdi fs-3 mdi-temperature-fahrenheit"></i>
+        <div class="flex-column bg-smokey rounded text-light  d-flex justify-content-center">
+            
+            <h2 class="text-center ">
+Quote:</h2> 
+            <p class="fs-4 mb-0 pb-4 fw-bold text-center">${this.content}</p>
+            <div class="d-flex flex-row justify-content-center">
+                    <i class="fs-2 secret-reveal mdi mdi-information"></i>
+
+            <h2 class="secret-area text-center text-light-emphasis ms-1">-${this.author}</h2>
+            </div>
+        </div>
         `
     }
 }
@@ -20,3 +26,8 @@ export class Weather {
 //         weather: undefined, 
 // * createdAt: ISO Timestamp(Virtual Added by Database)
 //     * updatedAt: ISO Timestamp(Virtual Added by Database)
+
+// quote: undefined,
+//     description: String, required
+//         * createdAt: ISO Timestamp(Virtual Added by Database)
+//             * updatedAt: ISO Timestamp(Virtual Added by Database)

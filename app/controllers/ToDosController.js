@@ -21,7 +21,7 @@ export class ToDosController {
       /**@ts-ignore */
       form.reset()
     } catch (error) {
-      Pop.toast(error);
+      Pop.toast("You must be logged in to make a ToDo");
     }
   }
 
